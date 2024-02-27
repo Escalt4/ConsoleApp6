@@ -10,12 +10,19 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите значение для x:");
+
             if (double.TryParse(Console.ReadLine(), out double x))
             {
                 double result = CalculateFunction(x);
-                Console.WriteLine(result);
+                Console.WriteLine($"Результат вычисления функции 4Sin(x) * 5Cos(x) при x = {x} равен: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода, вы ввели не числовое значение.");
             }
 
+            Console.WriteLine("Нажмите любую клавишу для выхода...");
             Console.ReadKey();
         }
 
