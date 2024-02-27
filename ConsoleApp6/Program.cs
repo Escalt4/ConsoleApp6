@@ -10,6 +10,18 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            if (double.TryParse(Console.ReadLine(), out double x))
+            {
+                double result = CalculateFunction(x);
+                Console.WriteLine(result);
+            }
+
+            Console.ReadKey();
+        }
+
+        static double CalculateFunction(double x)
+        {
+            return 4 * Math.Sin(x) * 5 * Math.Cos(x);
         }
     }
 }
